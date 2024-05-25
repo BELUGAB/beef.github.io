@@ -43,18 +43,22 @@
         .content {
             padding: 50px 20px;
             background-color: #e9ecef;
+            animation: fadeIn 1s ease-in-out; /* Ajout de l'animation fadeIn */
         }
         .services {
             padding: 50px 20px;
             background-color: #f7f7f7;
+            animation: fadeIn 1s ease-in-out; /* Ajout de l'animation fadeIn */
         }
         .gallery {
             padding: 50px 20px;
-            background-color: #f7f7f7; /* Changement de couleur ici */
+            background-color: #f7f7f7;
+            animation: fadeIn 1s ease-in-out; /* Ajout de l'animation fadeIn */
         }
         .contact {
             padding: 50px 20px;
             background-color: #e9ecef;
+            animation: fadeIn 1s ease-in-out; /* Ajout de l'animation fadeIn */
         }
         .content h2, .services h2, .gallery h2, .contact h2 {
             font-family: 'Montserrat', sans-serif;
@@ -76,7 +80,6 @@
             border-radius: 50px;
             text-decoration: none;
             transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-            
         }
         .button:hover {
             background-color: #0056b3;
@@ -91,17 +94,11 @@
         .footer p {
             margin: 0;
         }
-        .gallery .container {
-            display: flex;
-            flex-direction: row; /* Alignement horizontal */
-            justify-content: center; /* Centrer les images horizontalement */
-            flex-wrap: wrap; /* Permettre le retour à la ligne des images si nécessaire */
-        }
-        .gallery img {
-            max-width: 100%; /* Utilisation de la largeur maximale pour s'adapter à la taille de la galerie */
-            height: auto; /* Pour maintenir le ratio hauteur/largeur */
-            margin: 10px;
-        }
+       .gallery img {
+    max-width: 100%; /* Largeur maximale ajustée */
+    height: auto; /* Pour maintenir le ratio hauteur/largeur */
+    margin: 10px;
+}
         @keyframes fadeInDown {
             from {
                 opacity: 0;
@@ -120,6 +117,14 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
             }
         }
     </style>
@@ -152,9 +157,14 @@
             <h2>Contact</h2>
             <p>Si vous avez des questions ou souhaitez discuter d'un projet, n'hésitez pas à me contacter.</p>
             <p>Email: gabspacesystem@gmail.com</p>
-            <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank" class="button">Cliquez ici pour voir mes créations sur Tiktok</a>
-        </div>
-    </div>
-    <div class="footer">
-        <div class="container">
-            <p>&copy; 2024 Mon magnifique site internet. Tous
+            <a href="https://www.tiktok.com/@gabspacesystem" target="_blank" class="button">Cliquez ici pour voir mes créations sur Tiktok</a>
+</div>
+</div>
+<div class="footer">
+<div class="container">
+<p>© 2024 Mon magnifique site internet. Tous droits réservés.</p>
+</div>
+</div>
+
+</body>
+</html>
