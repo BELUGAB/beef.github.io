@@ -3,53 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>monsiteperso.com</title>
+    <title>Mon Site Magnifique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #f8f9fa;
+            color: #343a40;
         }
         .container {
-            max-width: 800px;
-            margin: 50px auto;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        h1 {
-            color: #2c3e50;
             text-align: center;
         }
-        p {
-            font-size: 18px;
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: url('https://static.nationalgeographic.fr/files/styles/image_3200/public/beluga-whale-underewater-closeup-teeth.adapt_.945.1.jpg?w=1600&h=900') ;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .hero h1 {
+            font-size: 4rem;
+            margin: 0;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin: 10px 0 0;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+        .content {
+            padding: 50px 20px;
+            background-color: #e9ecef;
+        }
+        .services {
+            padding: 50px 20px;
+            background-color: #f7f7f7;
+        }
+        .gallery {
+            padding: 50px 20px;
+            background-color: #f7f7f7; /* Changement de couleur ici */
+        }
+        .contact {
+            padding: 50px 20px;
+            background-color: #e9ecef;
+        }
+        .content h2, .services h2, .gallery h2, .contact h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .content p, .services p, .gallery p, .contact p {
+            font-size: 1.125rem;
             line-height: 1.6;
+            margin-bottom: 30px;
         }
-        a {
+        .button {
             display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            color: #ffffff;
-            background-color: #3498db;
+            padding: 15px 30px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 50px;
             text-decoration: none;
-            border-radius: 4px;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .button:hover {
+            background-color: #0056b3;
+            transform: translateY(-5px);
+        }
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
             text-align: center;
         }
-        a:hover {
-            background-color: #2980b9;
+        .footer p {
+            margin: 0;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 400px; /* Largeur maximale ajustée */
+            height: auto; /* Pour maintenir le ratio hauteur/largeur */
+            margin: 10px;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-    <h1>Bienvenue sur mon site !</h1>
-    <img src="https://static.nationalgeographic.fr/files/styles/image_3200/public/beluga-whale-underewater-closeup-teeth.adapt_.945.1.jpg?w=1600&h=900" alt="Description de l'image" style="width:100%; border-radius:8px;">
-    <p>J'ai crée ce site par curiosité, je voulais savoir comment héberger un site gratuitement. Il vaut mieux utiliser Github Page plutôt que localhost.run, qui est beaucoup plus dur à prendre en main. N'hésitez pas si vous avez des questions !</p>
-    <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank">Cliquez ici pour vous faire rickrolled</a>
-</div>
-
+    <div class="hero">
+        <div class="container">
+            <h1>Bienvenue sur mon magnifique site web</h1>
+            <p>Un endroit où la beauté ne peut être égalée</p>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <h2>À Propos de Moi</h2>
+            <p>Je suis un random qui ne sait pas trop quoi faire de sa nuit. Je cherchais un moyen d'héberger un site internet de manière gratuite avec un nom de domaine pas trop dégueu.</p>
+            <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank" class="button">Cliquez ici pour vous faire rickrolled</a>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="container">
+            <h2>Quelques images</h2>
+            <p>Découvrez ma famille.</p>
+            <img src="https://cdn.futura-sciences.com/buildsv6/images/wide1440/f/9/b/f9b829be6c_50209779_adobestock-480571672.jpg" alt="Image 1">
+            <img src="https://www.monde-animal.fr/wp-content/uploads/2020/04/fiche-animale-monde-animal-beluga-1.jpg" alt="Image 2">
+            <img src="https://medias.pourlascience.fr/api/v1/images/view/5a82af5d8fe56f6b29224abc/wide_1300/image.jpg" alt="Image 3">
+        </div>
+    </div>
+    <div class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Si vous avez des questions ou souhaitez discuter d'un projet, n'hésitez pas à me contacter.</p>
+            <p>Email: gabspacesystem@gmail.com</p>
+            <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank" class="button">Cliquez ici pour voir mes créations sur Tiktok</a>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <p>&copy; 2024 Mon magnifique site internet. Tous droits réservés.</p>
+        </div>
+    </div>
 </body>
 </html>
