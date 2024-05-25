@@ -91,9 +91,14 @@
         .footer p {
             margin: 0;
         }
+        .gallery .container {
+            display: flex;
+            flex-direction: row; /* Alignement horizontal */
+            justify-content: center; /* Centrer les images horizontalement */
+            flex-wrap: wrap; /* Permettre le retour à la ligne des images si nécessaire */
+        }
         .gallery img {
-            width: 100%;
-            max-width: 400px; /* Largeur maximale ajustée */
+            max-width: 100%; /* Utilisation de la largeur maximale pour s'adapter à la taille de la galerie */
             height: auto; /* Pour maintenir le ratio hauteur/largeur */
             margin: 10px;
         }
@@ -152,8 +157,4 @@
     </div>
     <div class="footer">
         <div class="container">
-            <p>&copy; 2024 Mon magnifique site internet. Tous droits réservés.</p>
-        </div>
-    </div>
-</body>
-</html>
+            <p>&copy; 2024 Mon magnifique site internet. Tous
