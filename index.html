@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Site Magnifique</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"> <!-- Ajout du lien vers la feuille de style AOS -->
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -43,22 +44,18 @@
         .content {
             padding: 50px 20px;
             background-color: #e9ecef;
-            animation: fadeIn 1s ease-in-out; /* Ajout de l'animation fadeIn */
         }
         .services {
             padding: 50px 20px;
             background-color: #f7f7f7;
-            animation: fadeIn 1s ease-in-out; /* Ajout de l'animation fadeIn */
         }
         .gallery {
             padding: 50px 20px;
             background-color: #f7f7f7;
-            animation: fadeIn 1s ease-in-out; /* Ajout de l'animation fadeIn */
         }
         .contact {
             padding: 50px 20px;
             background-color: #e9ecef;
-            animation: fadeIn 1s ease-in-out; /* Ajout de l'animation fadeIn */
         }
         .content h2, .services h2, .gallery h2, .contact h2 {
             font-family: 'Montserrat', sans-serif;
@@ -94,11 +91,11 @@
         .footer p {
             margin: 0;
         }
-       .gallery img {
-    max-width: 100%; /* Largeur maximale ajustée */
-    height: auto; /* Pour maintenir le ratio hauteur/largeur */
-    margin: 10px;
-}
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+        }
         @keyframes fadeInDown {
             from {
                 opacity: 0;
@@ -132,18 +129,18 @@
 <body>
     <div class="hero">
         <div class="container">
-            <h1>Bienvenue sur mon magnifique site web</h1>
-            <p>Un endroit où la beauté ne peut être égalée</p>
+            <h1 data-aos="fade-down">Bienvenue sur mon magnifique site web</h1>
+            <p data-aos="fade-up">Un endroit où la beauté ne peut être égalée</p>
         </div>
     </div>
-    <div class="content">
+    <div class="content" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <h2>À Propos de Moi</h2>
             <p>Je suis un random qui ne sait pas trop quoi faire de sa nuit. Je cherchais un moyen d'héberger un site internet de manière gratuite avec un nom de domaine pas trop dégueu.</p>
             <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank" class="button">Cliquez ici pour vous faire rickrolled</a>
         </div>
     </div>
-    <div class="gallery">
+    <div class="gallery" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <h2>Quelques images</h2>
             <p>Découvrez ma famille.</p>
@@ -152,19 +149,22 @@
             <img src="https://medias.pourlascience.fr/api/v1/images/view/5a82af5d8fe56f6b29224abc/wide_1300/image.jpg" alt="Image 3">
         </div>
     </div>
-    <div class="contact">
+    <div class="contact" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <h2>Contact</h2>
             <p>Si vous avez des questions ou souhaitez discuter d'un projet, n'hésitez pas à me contacter.</p>
             <p>Email: gabspacesystem@gmail.com</p>
             <a href="https://www.tiktok.com/@gabspacesystem" target="_blank" class="button">Cliquez ici pour voir mes créations sur Tiktok</a>
-</div>
-</div>
-<div class="footer">
-<div class="container">
-<p>© 2024 Mon magnifique site internet. Tous droits réservés.</p>
-</div>
-</div>
-
+        </div>
+    </div>
+    <div class="footer" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <p>© 2024 Mon magnifique site internet. Tous droits réservés.</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> <!-- Ajout du lien vers le script AOS -->
+    <script>
+        AOS.init(); // Initialisation de AOS pour activer les animations
+    </script>
 </body>
 </html>
