@@ -196,17 +196,6 @@
             border: 1px solid #666;
             width: 80%;
             color: #ddd; /* Texte clair */
-            display: flex;
-            flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
-            justify-content: space-between; /* Répartit les éléments sur la ligne */
-        }
-        
-        .folder-image {
-            width: calc(25% - 20px); /* 25% de largeur moins l'espace entre les images */
-            height: auto; /* Ajuste automatiquement la hauteur */
-            object-fit: cover; /* Redimensionne l'image tout en conservant ses proportions */
-            border-radius: 5px; /* Pour rendre l'image légèrement arrondie si nécessaire */
-            margin-bottom: 20px; /* Espace entre les images */
         }
 
         .close {
@@ -224,7 +213,13 @@
             cursor: pointer;
         }
 
-        
+        /* Styles pour ajuster la taille des images à l'intérieur des dossiers */
+        .folder-image {
+            width: 120px; /* Ajustez la taille selon vos préférences */
+            height: 120px; /* Ajustez la taille selon vos préférences */
+            object-fit: cover; /* Redimensionner l'image tout en conservant ses proportions */
+            border-radius: 5px; /* Pour rendre l'image légèrement arrondie si nécessaire */
+        }
     </style>
 </head>
 <body>
@@ -343,7 +338,7 @@
     <!-- Bouton Téléphone -->
     <a href="tel:+33777755193" class="button">Téléphone</a>
     <!-- Bouton CV -->
-    <a href="chemin-vers-votre-cv.pdf" target="_blank" class="button">CV</a>
+    <a href="elements/CV FR 2024.pdf" target="_blank" class="button">CV</a>
 </div>
     <!--Footer -->
     <div class="footer" data-aos="fade-up" data-aos-duration="1000">
