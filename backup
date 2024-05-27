@@ -23,7 +23,7 @@
         .hero {
             position: relative;
             height: 100vh;
-            background: url('https://img.freepik.com/vecteurs-premium/hello-world-est-mot-simple-pour-premiere-programmation-du-programmeur_48644-298.jpg') no-repeat center center/cover;
+            background: url('https://img.freepik.com/vecteurs-libre/fond-abstrait-bleu-noir_1340-17010.jpg?w=1380&t=st=1716845073~exp=1716845673~hmac=15f9ded10fca5df9171efefd156880ec6a2d102a464a500200a8fe30d583db2a') no-repeat center center/cover;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -37,7 +37,7 @@
         }
         .hero p {
             font-size: 1.5rem;
-            margin: 120px 0 0;
+            margin: 0px 0 0;
             animation: fadeInUp 1.5s ease-in-out;
         }
         .content, .gallery, .contact {
@@ -332,11 +332,11 @@
     <h2>Contact</h2>
     <p>Pour toute question ou demande d'information, vous pouvez me contacter de différentes manières :</p>
     <!-- Bouton LinkedIn -->
-    <a href="https://www.linkedin.com/in/votre-nom" target="_blank" class="button">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/gabriel-casarotto/" target="_blank" class="button">LinkedIn</a>
     <!-- Bouton E-mail -->
-    <a href="mailto:votre-email@example.com" class="button">E-mail</a>
+    <a href="mailto:gabriel.casarotto-moreira@ipsa.fr" class="button">E-mail</a>
     <!-- Bouton Téléphone -->
-    <a href="tel:+1234567890" class="button">Téléphone</a>
+    <a href="tel:+33777755193" class="button">Téléphone</a>
     <!-- Bouton CV -->
     <a href="chemin-vers-votre-cv.pdf" target="_blank" class="button">CV</a>
 </div>
