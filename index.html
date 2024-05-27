@@ -57,6 +57,7 @@
         .button {
             display: inline-block;
             padding: 15px 30px;
+            margin: 10px; /* Ajout de la marge entre les boutons */
             font-size: 1rem;
             color: #fff;
             background-color: #007bff;
@@ -65,6 +66,7 @@
             text-decoration: none;
             transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
+
         .button:hover {
             background-color: #0056b3;
             transform: translateY(-5px);
@@ -125,9 +127,15 @@
         
         /* Media Queries pour les petits écrans (smartphones) */
         @media only screen and (max-width: 767px) {
+            /* Réduire la taille de la police des titres des dossiers */
+            .folder p {
+                font-size: 0.8rem; /* Ajustez la taille de la police selon vos besoins */
+            }
+        
+            /* Réduire la taille des images à l'intérieur des dossiers */
             .folder img {
-                width: 70px; /* Ajuster la largeur de l'image pour les smartphones */
-                height: 70px; /* Ajuster la hauteur de l'image pour les smartphones */
+                width: 70px; /* Ajustez la largeur de l'image pour les smartphones */
+                height: 70px; /* Ajustez la hauteur de l'image pour les smartphones */
             }
         }
         
