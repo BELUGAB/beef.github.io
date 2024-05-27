@@ -267,8 +267,8 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('langage')">&times;</span>
             <!-- Contenu de l'album langage -->
-            <h3>Album Langage de Programmation</h3>
-            <img src="https://e7.pngegg.com/pngimages/724/306/png-clipart-c-logo-c-programming-language-icon-letter-c-blue-logo.png" alt="Image 1" class="folder-image">
+            <h3>Langage de Programmation</h3>
+            <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/c_original_logo_icon_146611.png" alt="Image 1" class="folder-image">
             
             <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="Image 2" class="folder-image">
             
@@ -284,7 +284,7 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('langues')">&times;</span>
             <!-- Contenu de l'album langues -->
-            <h3>Album Langues</h3>
+            <h3>Langues</h3>
             <img src="images/suede.jpg" alt="Image 1" class="folder-image">
             <img src="images/suede2.jpg" alt="Image 2" class="folder-image">
         </div>
@@ -294,7 +294,7 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('logiciels')">&times;</span>
             <!-- Contenu de l'album logiciels -->
-            <h3>Album Logiciels</h3>
+            <h3>Logiciels</h3>
             <img src="images/plage.jpg" alt="Image 1" class="folder-image">
             <img src="images/plage1.jpg" alt="Image 2" class="folder-image">
             <img src="https://w7.pngwing.com/pngs/520/669/png-transparent-c-logo-c-programming-language-computer-icons-computer-programming-programming-miscellaneous-blue-trademark.png" alt="Image 3" class="folder-image">
