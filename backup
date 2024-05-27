@@ -215,8 +215,8 @@
 
         /* Styles pour ajuster la taille des images à l'intérieur des dossiers */
         .folder-image {
-            width: 100px; /* Ajustez la taille selon vos préférences */
-            height: 100px; /* Ajustez la taille selon vos préférences */
+            width: 120px; /* Ajustez la taille selon vos préférences */
+            height: 120px; /* Ajustez la taille selon vos préférences */
             object-fit: cover; /* Redimensionner l'image tout en conservant ses proportions */
             border-radius: 5px; /* Pour rendre l'image légèrement arrondie si nécessaire */
         }
@@ -276,7 +276,12 @@
             
             <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/arduino_logo_icon_170518.png" alt="Image 2" class="folder-image">
             
-           <img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" alt="Image 2" class="folder-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Matlab_Logo.png/800px-Matlab_Logo.png" alt="Image 2" class="folder-image">
+            
+             <img src="https://cdn-icons-png.flaticon.com/512/888/888859.png" alt="Image 2" class="folder-image">
+            
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" alt="Image 2" class="folder-image">
+            
         </div>
     </div>
 
