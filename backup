@@ -328,13 +328,18 @@
     </div>
     
     <!-- Section Contact -->
-    <div class="contact" data-aos="fade-up" data-aos-duration="1000">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Pour toute question ou demande d'information, vous pouvez me contacter à l'adresse suivante : contact@example.com. Je suis également disponible sur les réseaux sociaux.</p>
-        </div>
-    </div>
-
+    <div class="container">
+    <h2>Contact</h2>
+    <p>Pour toute question ou demande d'information, vous pouvez me contacter de différentes manières :</p>
+    <!-- Bouton LinkedIn -->
+    <a href="https://www.linkedin.com/in/votre-nom" target="_blank" class="button">LinkedIn</a>
+    <!-- Bouton E-mail -->
+    <a href="mailto:votre-email@example.com" class="button">E-mail</a>
+    <!-- Bouton Téléphone -->
+    <a href="tel:+1234567890" class="button">Téléphone</a>
+    <!-- Bouton CV -->
+    <a href="chemin-vers-votre-cv.pdf" target="_blank" class="button">CV</a>
+</div>
     <!--Footer -->
     <div class="footer" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
