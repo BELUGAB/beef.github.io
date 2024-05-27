@@ -290,8 +290,14 @@
             <span class="close" onclick="closeModal('langues')">&times;</span>
             <!-- Contenu de l'album langues -->
             <h3>Langues</h3>
-            <img src="images/suede.jpg" alt="Image 1" class="folder-image">
-            <img src="images/suede2.jpg" alt="Image 2" class="folder-image">
+            <img src="https://cdn-icons-png.flaticon.com/512/197/197560.png" alt="français" class="folder-image">
+            
+            <img src="https://cdn-icons-png.flaticon.com/512/197/197374.png" alt="Anglais" class="folder-image">
+            
+            <img src="https://cdn-icons-png.flaticon.com/512/197/197386.png" alt="Portugais" class="folder-image">
+            
+            <img src="https://cdn.icon-icons.com/icons2/1531/PNG/512/3253482-flag-spain-icon_106784.png" alt="Espagnol" class="folder-image">
+            
         </div>
     </div>
 
