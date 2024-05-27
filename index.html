@@ -23,7 +23,7 @@
         .hero {
             position: relative;
             height: 100vh;
-            background: url('elements/background.jpg') no-repeat center center/cover;
+            background: url('https://img.freepik.com/vecteurs-libre/fond-fleche-esthetique-vecteur-concept-technologie-degrade-noir_53876-140559.jpg?w=996&t=st=1716845070~exp=1716845670~hmac=eb4a64fc443b907bc42b64369da48f464164308ef3ed7738b8a0c3c350f024e0') no-repeat center center/cover;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -57,7 +57,6 @@
         .button {
             display: inline-block;
             padding: 15px 30px;
-            margin: 10px; /* Ajout de la marge entre les boutons */
             font-size: 1rem;
             color: #fff;
             background-color: #007bff;
@@ -66,7 +65,6 @@
             text-decoration: none;
             transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
-
         .button:hover {
             background-color: #0056b3;
             transform: translateY(-5px);
@@ -127,9 +125,10 @@
         
         /* Media Queries pour les petits écrans (smartphones) */
         @media only screen and (max-width: 767px) {
-            .folder p {
-                font-size: 0.5rem; /* Réduire la taille de la police pour les smartphones */
+            .hero h1 {
+                font-size: 2.5rem;
             }
+            /* Ajoutez d'autres styles spécifiques aux smartphones ici */
         }
         
         /* Media Queries pour les tablettes */
