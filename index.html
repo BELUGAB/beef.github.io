@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site Magnifique</title>
+    <title>Mon Site Web</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"> <!-- Ajout du lien vers la feuille de style AOS -->
     <style>
@@ -11,8 +11,8 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
-            color: #343a40;
+            background-color: #333; /* Fond sombre */
+            color: #ddd; /* Texte clair */
         }
         .container {
             max-width: 1200px;
@@ -23,8 +23,7 @@
         .hero {
             position: relative;
             height: 100vh;
-            background: url('https://static.nationalgeographic.fr/files/styles/image_3200/public/beluga-whale-underewater-closeup-teeth.adapt_.945.1.jpg?w=1600&h=900') ;
-            background-size: cover;
+            background: url('https://img.freepik.com/vecteurs-libre/fond-fleche-esthetique-vecteur-concept-technologie-degrade-noir_53876-140559.jpg?w=996&t=st=1716845070~exp=1716845670~hmac=eb4a64fc443b907bc42b64369da48f464164308ef3ed7738b8a0c3c350f024e0') no-repeat center center/cover;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -38,31 +37,19 @@
         }
         .hero p {
             font-size: 1.5rem;
-            margin: 10px 0 0;
+            margin: 0px 0 0;
             animation: fadeInUp 1.5s ease-in-out;
         }
-        .content {
+        .content, .gallery, .contact {
             padding: 50px 20px;
-            background-color: #e9ecef;
+            min-height: 400px; /* Ajout d'une hauteur minimale pour uniformiser les sections */
         }
-        .services {
-            padding: 50px 20px;
-            background-color: #f7f7f7;
-        }
-        .gallery {
-            padding: 50px 20px;
-            background-color: #f7f7f7;
-        }
-        .contact {
-            padding: 50px 20px;
-            background-color: #e9ecef;
-        }
-        .content h2, .services h2, .gallery h2, .contact h2 {
+        .content h2, .gallery h2, .contact h2 {
             font-family: 'Montserrat', sans-serif;
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
-        .content p, .services p, .gallery p, .contact p {
+        .content p, .gallery p, .contact p {
             font-size: 1.125rem;
             line-height: 1.6;
             margin-bottom: 30px;
@@ -82,299 +69,31 @@
             background-color: #0056b3;
             transform: translateY(-5px);
         }
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+            border-radius: 15px;
+        }
         .footer {
-            background-color: #343a40;
-            color: #fff;
+            background-color: #222; /* Fond sombre */
+            color: #888; /* Texte gris clair */
             padding: 20px 0;
             text-align: center;
         }
         .footer p {
             margin: 0;
         }
-        .gallery img {
-            max-width: 100%;
-            height: auto;
-            margin: 10px;
+        .heart {
+            color: #e25555;
+            font-size: 2rem;
+            margin: 0 5px;
         }
-        .wheel-and-hamster {
-          --dur: 1s;
-          position: relative;
-          width: 12em;
-          height: 12em;
-          font-size: 14px;
-          position: absolute;
-          top: 105%;
-          left: 50%;
-          transform: translate(-50%, -50%);
+        .heart-small {
+            color: #e25555;
+            font-size: 1.5rem;
+            margin: 0 3px;
         }
-
-        .wheel,
-        .hamster,
-        .hamster div,
-        .spoke {
-          position: absolute;
-        }
-        
-        .wheel,
-        .spoke {
-          border-radius: 50%;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
-        
-        .wheel {
-          background: radial-gradient(100% 100% at center,hsla(0,0%,60%,0) 47.8%,hsl(0,0%,60%) 48%);
-          z-index: 2;
-        }
-        
-        .hamster {
-          animation: hamster var(--dur) ease-in-out infinite;
-          top: 50%;
-          left: calc(50% - 3.5em);
-          width: 7em;
-          height: 3.75em;
-          transform: rotate(4deg) translate(-0.8em,1.85em);
-          transform-origin: 50% 0;
-          z-index: 1;
-        }
-        
-        .hamster__head {
-          animation: hamsterHead var(--dur) ease-in-out infinite;
-          background: hsl(30,90%,55%);
-          border-radius: 70% 30% 0 100% / 40% 25% 25% 60%;
-          box-shadow: 0 -0.25em 0 hsl(30,90%,80%) inset,
-        		0.75em -1.55em 0 hsl(30,90%,90%) inset;
-          top: 0;
-          left: -2em;
-          width: 2.75em;
-          height: 2.5em;
-          transform-origin: 100% 50%;
-        }
-        
-        .hamster__ear {
-          animation: hamsterEar var(--dur) ease-in-out infinite;
-          background: hsl(0,90%,85%);
-          border-radius: 50%;
-          box-shadow: -0.25em 0 hsl(30,90%,55%) inset;
-          top: -0.25em;
-          right: -0.25em;
-          width: 0.75em;
-          height: 0.75em;
-          transform-origin: 50% 75%;
-        }
-        
-        .hamster__eye {
-          animation: hamsterEye var(--dur) linear infinite;
-          background-color: hsl(0,0%,0%);
-          border-radius: 50%;
-          top: 0.375em;
-          left: 1.25em;
-          width: 0.5em;
-          height: 0.5em;
-        }
-        
-        .hamster__nose {
-          background: hsl(0,90%,75%);
-          border-radius: 35% 65% 85% 15% / 70% 50% 50% 30%;
-          top: 0.75em;
-          left: 0
-          ;
-          width: 0.2em;
-          height: 0.25em;
-        }
-        
-        .hamster__body {
-          animation: hamsterBody var(--dur) ease-in-out infinite;
-          background: hsl(30,90%,90%);
-          border-radius: 50% 30% 50% 30% / 15% 60% 40% 40%;
-          box-shadow: 0.1em 0.75em 0 hsl(30,90%,55%) inset,
-        		0.15em -0.5em 0 hsl(30,90%,80%) inset;
-          top: 0.25em;
-          left: 2em;
-          width: 4.5em;
-          height: 3em;
-          transform-origin: 17% 50%;
-          transform-style: preserve-3d;
-        }
-        
-        .hamster__limb--fr,
-        .hamster__limb--fl {
-          clip-path: polygon(0 0,100% 0,70% 80%,60% 100%,0% 100%,40% 80%);
-          top: 2em;
-          left: 0.5em;
-          width: 1em;
-          height: 1.5em;
-          transform-origin: 50% 0;
-        }
-        
-        .hamster__limb--fr {
-          animation: hamsterFRLimb var(--dur) linear infinite;
-          background: linear-gradient(hsl(30,90%,80%) 80%,hsl(0,90%,75%) 80%);
-          transform: rotate(15deg) translateZ(-1px);
-        }
-        
-        .hamster__limb--fl {
-          animation: hamsterFLLimb var(--dur) linear infinite;
-          background: linear-gradient(hsl(30,90%,90%) 80%,hsl(0,90%,85%) 80%);
-          transform: rotate(15deg);
-        }
-        
-        .hamster__limb--br,
-        .hamster__limb--bl {
-          border-radius: 0.75em 0.75em 0 0;
-          clip-path: polygon(0 0,100% 0,100% 30%,70% 90%,70% 100%,30% 100%,40% 90%,0% 30%);
-          top: 1em;
-          left: 2.8em;
-          width: 1.5em;
-          height: 2.5em;
-          transform-origin: 50% 30%;
-        }
-        
-        .hamster__limb--br {
-          animation: hamsterBRLimb var(--dur) linear infinite;
-          background: linear-gradient(hsl(30,90%,80%) 90%,hsl(0,90%,75%) 90%);
-          transform: rotate(-25deg) translateZ(-1px);
-        }
-        
-        .hamster__limb--bl {
-          animation: hamsterBLLimb var(--dur) linear infinite;
-          background: linear-gradient(hsl(30,90%,90%) 90%,hsl(0,90%,85%) 90%);
-          transform: rotate(-25deg);
-        }
-        
-        .hamster__tail {
-          animation: hamsterTail var(--dur) linear infinite;
-          background: hsl(0,90%,85%);
-          border-radius: 0.25em 50% 50% 0.25em;
-          box-shadow: 0 -0.2em 0 hsl(0,90%,75%) inset;
-          top: 1.5em;
-          right: -0.5em;
-          width: 1em;
-          height: 0.5em;
-          transform: rotate(30deg) translateZ(-1px);
-          transform-origin: 0.25em 0.25em;
-        }
-        
-        .spoke {
-          animation: spoke var(--dur) linear infinite;
-          background: radial-gradient(100% 100% at center,hsl(0,0%,60%) 4.8%,hsla(0,0%,60%,0) 5%),
-        		linear-gradient(hsla(0,0%,55%,0) 46.9%,hsl(0,0%,65%) 47% 52.9%,hsla(0,0%,65%,0) 53%) 50% 50% / 99% 99% no-repeat;
-        }
-        
-        /* Animations */
-        @keyframes hamster {
-          from, to {
-            transform: rotate(4deg) translate(-0.8em,1.85em);
-          }
-        
-          50% {
-            transform: rotate(0) translate(-0.8em,1.85em);
-          }
-        }
-        
-        @keyframes hamsterHead {
-          from, 25%, 50%, 75%, to {
-            transform: rotate(0);
-          }
-        
-          12.5%, 37.5%, 62.5%, 87.5% {
-            transform: rotate(8deg);
-          }
-        }
-        
-        @keyframes hamsterEye {
-          from, 90%, to {
-            transform: scaleY(1);
-          }
-        
-          95% {
-            transform: scaleY(0);
-          }
-        }
-        
-        @keyframes hamsterEar {
-          from, 25%, 50%, 75%, to {
-            transform: rotate(0);
-          }
-        
-          12.5%, 37.5%, 62.5%, 87.5% {
-            transform: rotate(12deg);
-          }
-        }
-        
-        @keyframes hamsterBody {
-          from, 25%, 50%, 75%, to {
-            transform: rotate(0);
-          }
-        
-          12.5%, 37.5%, 62.5%, 87.5% {
-            transform: rotate(-2deg);
-          }
-        }
-        
-        @keyframes hamsterFRLimb {
-          from, 25%, 50%, 75%, to {
-            transform: rotate(50deg) translateZ(-1px);
-          }
-        
-          12.5%, 37.5%, 62.5%, 87.5% {
-            transform: rotate(-30deg) translateZ(-1px);
-          }
-        }
-        
-        @keyframes hamsterFLLimb {
-          from, 25%, 50%, 75%, to {
-            transform: rotate(-30deg);
-          }
-        
-          12.5%, 37.5%, 62.5%, 87.5% {
-            transform: rotate(50deg);
-          }
-        }
-        
-        @keyframes hamsterBRLimb {
-          from, 25%, 50%, 75%, to {
-            transform: rotate(-60deg) translateZ(-1px);
-          }
-        
-          12.5%, 37.5%, 62.5%, 87.5% {
-            transform: rotate(20deg) translateZ(-1px);
-          }
-        }
-        
-        @keyframes hamsterBLLimb {
-          from, 25%, 50%, 75%, to {
-            transform: rotate(20
-deg);
-          }
-        
-          12.5%, 37.5%, 62.5%, 87.5% {
-            transform: rotate(-60deg);
-          }
-        }
-        
-        @keyframes hamsterTail {
-          from, 25%, 50%, 75%, to {
-            transform: rotate(30deg) translateZ(-1px);
-          }
-        
-          12.5%, 37.5%, 62.5%, 87.5% {
-            transform: rotate(10deg) translateZ(-1px);
-          }
-        }
-        
-        @keyframes spoke {
-          from {
-            transform: rotate(0);
-          }
-        
-          to {
-            transform: rotate(-1turn);
-          }
-        }
-        
         @keyframes fadeInDown {
             from {
                 opacity: 0;
@@ -421,67 +140,240 @@ deg);
         @media only screen and (min-width: 992px) and (max-width: 1199px) {
             /* Ajoutez d'autres styles spécifiques aux écrans de taille moyenne ici */
         }
+
+        /* Teintes de blanc pour les différentes sections */
+        .content {
+            background-color: #444; /* Gris foncé */
+        }
+        .gallery {
+            background-color: #555; /* Gris légèrement plus clair */
+        }
+       
+    .contact {
+            background-color: #666; /* Gris moyen */
+        }
+
+        /* Styles pour les dossiers */
+        .folders {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .folder {
+            cursor: pointer;
+            flex: 1;
+        }
+        .folder img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        /* Styles pour les albums */
+        .album {
+            display: none; /* Masquer initialement tous les albums */
+        }
+
+        /* Modales pour les albums */
+        .modal {
+            display: none; /* Masquer initialement la modale */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8); /* Fond sombre semi-transparent */
+        }
+
+        .modal-content {
+            margin: 10% auto;
+            background-color: #333; /* Fond sombre */
+            padding: 20px;
+            border: 1px solid #666;
+            width: 80%;
+            color: #ddd; /* Texte clair */
+        }
+
+        .close {
+            color:
+#aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #fff; /* Texte blanc */
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Styles pour ajuster la taille des images à l'intérieur des dossiers */
+        .folder-image {
+            width: 120px; /* Ajustez la taille selon vos préférences */
+            height: 120px; /* Ajustez la taille selon vos préférences */
+            object-fit: cover; /* Redimensionner l'image tout en conservant ses proportions */
+            border-radius: 5px; /* Pour rendre l'image légèrement arrondie si nécessaire */
+        }
     </style>
 </head>
 <body>
     <div class="hero">
         <div class="container">
-            <h1 data-aos="fade-down">Bienvenue sur mon magnifique site web</h1>
-            <p data-aos="fade-up">Un endroit où la beauté ne peut être égalée</p>
+            <h1 data-aos="fade-down">Bienvenue sur mon site web !</h1>
+            <p data-aos="fade-up">Ici vous apprendrez à mieux me connaître</p>
         </div>
     </div>
     <div class="content" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
-            <h2>À Propos de Moi</h2>
-            <p>Je suis un random qui ne sait pas trop quoi faire de sa nuit. Je cherchais un moyen d'héberger un site internet de manière gratuite avec un nom de domaine pas trop dégueu.</p>
-            <a href="https://www.youtube.com/watch?v=0CFBUSHzENI" target="_blank" class="button">Cliquez ici pour ne plus être raciste</a>
+            <h2>À propos de moi</h2>
+            <p>Je m'appelle Gabriel Casarotto, je suis actuellement en troisième année dans une école d'ingénieurs aéronautique et spatial, dans la filière "signaux et systèmes aérospatiaux". Dès la rentrée prochaine, j'aurai l'honneur de me concentrer pleinement sur la filière spatiale de l'école : "Espace, Lanceurs et Satellites". Actuellement, je suis à la recherche d'un emploi pour la période de mi-juin à mi-août, avant de partir à l'étranger pour un semestre d'études.</p>
         </div>
     </div>
+
+    <!-- Section pour les dossiers (langage de programmation, langues, Logiciels) -->
     <div class="gallery" data-aos="fade-up" data-aos-duration="1000">
-    <div class="container">
-        <h2>Quelques images</h2>
-        <p>Découvrez ma famille.</p>
-        <img src="https://cdn.futura-sciences.com/buildsv6/images/wide1440/f/9/b/f9b829be6c_50209779_adobestock-480571672.jpg" alt="Image 1">
-        <img src="https://www.monde-animal.fr/wp-content/uploads/2020/04/fiche-animale-monde-animal-beluga-1.jpg" alt="Image 2">
-        <img src="https://medias.pourlascience.fr/api/v1/images/view/5a82af5d8fe56f6b29224abc/wide_1300/image.jpg" alt="Image 3">
-    </div>
-    <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
-        <div class="wheel"></div>
-        <div class="hamster">
-            <div class="hamster__body">
-                <div class="hamster__head">
-                    <div class="hamster__ear"></div>
-                    <div class="hamster__eye"></div>
-                    <div class="hamster__nose"></div>
+        <div class="container">
+            <h2>Mes compétences</h2>
+            <div class="folders">
+                <!-- Dossier Langage de Programmation -->
+                <div class="folder" onclick="openModal('langage')">
+                    <img class="folder-image" src="https://cdn.icon-icons.com/icons2/2217/PNG/512/augmented_reality_computer_developer_coding_programming_icon_134250.png" alt="Langage de Programmation">
+                    <p>Langage de Programmation</p>
                 </div>
-                <div class="hamster__limb hamster__limb--fr"></div>
-                <div class="hamster__limb hamster__limb--fl"></div>
-                <div class="hamster__limb hamster__limb--br"></div>
-                <div class="hamster__limb hamster__limb--bl"></div>
-                <div class="hamster__tail"></div>
+
+                <!-- Dossier Langues -->
+                <div class="folder" onclick="openModal('langues')">
+                    <img class="folder-image" src="https://cdn-icons-png.flaticon.com/512/8495/8495091.png" alt="Langues">
+                    <p>Langues</p>
+                </div>
+
+                <!-- Dossier Logiciels -->
+                <div class="folder" onclick="openModal('logiciels')">
+                    <img class="folder-image" src="https://static.vecteezy.com/ti/vecteur-libre/p3/18779704-illustrationle-d-icone-de-couleur-de-logiciel-d-application-vectoriel.jpg" alt="Logiciels">
+                    <p>Logiciels</p>
+                </div>
             </div>
         </div>
-        <div class="spoke"></div>
     </div>
-</div>
-<div style="height: 300px;"></div> <!-- Ajout d'un espace entre la galerie et la section de contact -->
-<div class="contact" data-aos="fade-up" data-aos-duration="1000">
-    <div class="container">
-        <h2>Contact</h2>
-        <p>Si vous avez des questions ou souhaitez discuter d'un projet, n'hésitez pas à me contacter.</p>
-        <p>Email: gabspacesystem@gmail.com</p>
-        <a href="https://www.tiktok.com/@gabspacesystem" target="_blank" class="button">Cliquez ici pour voir mes créations sur Tiktok</a>
-    </div>
-</div>
-<div class="footer" data-aos="fade-up" data-aos-duration="1000">
-<div class="container">
-<p>© 2024 Mon magnifique site internet. Tous droits réservés.</p>
-</div>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> <!-- Ajout du lien vers le script AOS -->
-<script>
-AOS.init(); // Initialisation de AOS pour activer les animations
-</script>
 
+    <!-- Modales pour les albums -->
+    <div id="langageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('langage')">&times;</span>
+            <!-- Contenu de l'album langage -->
+            <h3>Langage de Programmation</h3>
+            <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/c_original_logo_icon_146611.png" alt="Image 1" class="folder-image">
+            
+            <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="Image 2" class="folder-image">
+            
+            <img src="https://cdn.icon-icons.com/icons2/112/PNG/512/python_18894.png" alt="Image 2" class="folder-image">
+            
+            <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/arduino_logo_icon_170518.png" alt="Image 2" class="folder-image">
+            
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Matlab_Logo.png/800px-Matlab_Logo.png" alt="Image 2" class="folder-image">
+            
+             <img src="https://cdn-icons-png.flaticon.com/512/888/888859.png" alt="Image 2" class="folder-image">
+            
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" alt="Image 2" class="folder-image">
+            
+        </div>
+    </div>
+
+    <div id="languesModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('langues')">&times;</span>
+            <!-- Contenu de l'album langues -->
+            <h3>Langues</h3>
+            <img src="https://cdn-icons-png.flaticon.com/512/197/197560.png" alt="français" class="folder-image">
+            
+            <img src="https://cdn-icons-png.flaticon.com/512/197/197374.png" alt="Anglais" class="folder-image">
+            
+            <img src="https://cdn-icons-png.flaticon.com/512/197/197386.png" alt="Portugais" class="folder-image">
+            
+            <img src="https://cdn.icon-icons.com/icons2/1531/PNG/512/3253482-flag-spain-icon_106784.png" alt="Espagnol" class="folder-image">
+            
+        </div>
+    </div>
+
+    <div id="logicielsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('logiciels')">&times;</span>
+            <!-- Contenu de l'album logiciels -->
+            <h3>Logiciels</h3>
+            <img src="https://play-lh.googleusercontent.com/U9xypdqrbAAa2SR1oKqsXn8UpBZzftY9N2ZAfzpgFRDMme9JCVJIZU9RvRZIOOGbWvtc" alt="Catia" class="folder-image">
+            
+            <img src="https://cdn.icon-icons.com/icons2/3053/PNG/512/autodesk_fusion_macos_bigsur_icon_190367.png" alt="fusion 360" class="folder-image">
+            
+            <img src="https://cdn.icon-icons.com/icons2/3053/PNG/512/ultimaker_cura_macos_bigsur_icon_189596.png" alt="cura" class="folder-image">
+            
+            <img src="https://easyeda.com/images/easyeda-thumbnail.png?id=d5ed1fe5930602975df1" alt="easyEDA" class="folder-image">
+            
+            <img src="https://cdn.icon-icons.com/icons2/1381/PNG/512/msword_94106.png" alt="word" class="folder-image">
+            
+            <img src="https://images.freeimages.com/fic/images/icons/2795/office_2013_hd/2000/powerpoint.png" alt="powerpoint" class="folder-image">
+            
+            <img src="https://cdn.icon-icons.com/icons2/1381/PNG/512/msexcel_93695.png" alt="excel" class="folder-image">
+            
+            <img src="https://www.tiilt.io/wp-content/uploads/2023/07/Design-sans-titre-3.png" alt="Image 3" class="folder-image">
+            
+            
+            
+        </div>
+    </div>
+    
+    <!-- Section Contact -->
+    <div class="container">
+    <h2>Contact</h2>
+    <p>Pour toute question ou demande d'information, vous pouvez me contacter de différentes manières :</p>
+    <!-- Bouton LinkedIn -->
+    <a href="https://www.linkedin.com/in/gabriel-casarotto/" target="_blank" class="button">LinkedIn</a>
+    <!-- Bouton E-mail -->
+    <a href="mailto:gabriel.casarotto-moreira@ipsa.fr" class="button">E-mail</a>
+    <!-- Bouton Téléphone -->
+    <a href="tel:+33777755193" class="button">Téléphone</a>
+    <!-- Bouton CV -->
+    <a href="elements/CV FR 2024.pdf" target="_blank" class="button">CV</a>
+</div>
+    <!--Footer -->
+    <div class="footer" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <p>© 2024 Site de Gabriel Casarotto. Tous droits réservés.</p>
+        </div>
+    </div>
+
+    <!-- Script pour afficher/masquer les modales -->
+    <script>
+        function openModal(albumName) {
+            var modal = document.getElementById(albumName + 'Modal');
+            modal.style.display = "block";
+        }
+
+        function closeModal(albumName) {
+            var modal = document.getElementById(albumName + 'Modal');
+            modal.style.display = "none";
+        }
+
+        // Fermer la modale lorsque l'utilisateur clique en dehors de celle-ci
+        window.onclick = function(event) {
+            var modals = document.getElementsByClassName('modal');
+            for (var i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+    <!-- Script pour l'initialisation de AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
