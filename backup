@@ -23,7 +23,7 @@
         .hero {
             position: relative;
             height: 100vh;
-            background: url('https://img.freepik.com/vecteurs-libre/fond-abstrait-bleu-noir_1340-17010.jpg?w=1380&t=st=1716845073~exp=1716845673~hmac=15f9ded10fca5df9171efefd156880ec6a2d102a464a500200a8fe30d583db2a') no-repeat center center/cover;
+            background: url('https://img.freepik.com/vecteurs-libre/fond-fleche-esthetique-vecteur-concept-technologie-degrade-noir_53876-140559.jpg?w=996&t=st=1716845070~exp=1716845670~hmac=eb4a64fc443b907bc42b64369da48f464164308ef3ed7738b8a0c3c350f024e0') no-repeat center center/cover;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -232,7 +232,7 @@
     <div class="content" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <h2>À propos de moi</h2>
-            <p>Je suis en 3ème année en école d'ingénieur, spécialisé en développement web et en gestion de projet. Passionné par les nouvelles technologies, je m'efforce d'appliquer mes connaissances pour créer des solutions innovantes. Dans mes temps libres, j'aime voyager, pratiquer des sports en plein air et explorer de nouveaux horizons.</p>
+            <p>Je m'appelle Gabriel Casarotto, je suis actuellement en troisième année dans une école d'ingénieurs aéronautique et spatial, dans la filière "signaux et systèmes aérospatiaux". Dès la rentrée prochaine, j'aurai l'honneur de me concentrer pleinement sur la filière spatiale de l'école : "Espace, Lanceurs et Satellites". Actuellement, je suis à la recherche d'un emploi pour la période de mi-juin à mi-août, avant de partir à l'étranger pour un semestre d'études.</p>
         </div>
     </div>
 
@@ -338,7 +338,7 @@
     <!-- Bouton Téléphone -->
     <a href="tel:+33777755193" class="button">Téléphone</a>
     <!-- Bouton CV -->
-    <a href="chemin-vers-votre-cv.pdf" target="_blank" class="button">CV</a>
+    <a href="elements/CV.pdf" target="_blank" class="button">CV</a>
 </div>
     <!--Footer -->
     <div class="footer" data-aos="fade-up" data-aos-duration="1000">
