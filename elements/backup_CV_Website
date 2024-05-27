@@ -44,11 +44,14 @@
             padding: 50px 20px;
             min-height: 400px; /* Ajout d'une hauteur minimale pour uniformiser les sections */
         }
+        /* Styles pour les titres des sections */
         .content h2, .gallery h2, .contact h2 {
             font-family: 'Montserrat', sans-serif;
             font-size: 2.5rem;
             margin-bottom: 20px;
+            margin-top: -10px; /* Réduire la marge supérieure */
         }
+
         .content p, .gallery p, .contact p {
             font-size: 1.125rem;
             line-height: 1.6;
@@ -239,7 +242,7 @@
     </div>
     <div class="content" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
-            <h2>À propos de moi</h2>
+            <h2>À propos de moi 🤔</h2>
             <p>Je m'appelle Gabriel Casarotto, je suis actuellement en troisième année dans une école d'ingénieurs aéronautique et spatial, dans la filière "signaux et systèmes aérospatiaux". Dès la rentrée prochaine, j'aurai l'honneur de me concentrer pleinement sur la filière spatiale de l'école : "Espace, Lanceurs et Satellites". Actuellement, je suis à la recherche d'un emploi pour la période de mi-juin à mi-août, avant de partir à l'étranger pour un semestre d'études.</p>
         </div>
     </div>
@@ -247,7 +250,7 @@
     <!-- Section pour les dossiers (langage de programmation, langues, Logiciels) -->
     <div class="gallery" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
-            <h2>Mes compétences</h2>
+            <h2>Mes compétences ⚙️</h2>
             <div class="folders">
                 <!-- Dossier Langage de Programmation -->
                 <div class="folder" onclick="openModal('langage')">
@@ -336,18 +339,21 @@
     </div>
     
     <!-- Section Contact -->
+<div class="contact" data-aos="fade-up" data-aos-duration="1000">
     <div class="container">
-    <h2>Contact</h2>
-    <p>Pour toute question ou demande d'information, vous pouvez me contacter de différentes manières :</p>
-    <!-- Bouton LinkedIn -->
-    <a href="https://www.linkedin.com/in/gabriel-casarotto/" target="_blank" class="button">LinkedIn</a>
-    <!-- Bouton E-mail -->
-    <a href="mailto:gabriel.casarotto-moreira@ipsa.fr" class="button">E-mail</a>
-    <!-- Bouton Téléphone -->
-    <a href="tel:+33777755193" class="button">Téléphone</a>
-    <!-- Bouton CV -->
-    <a href="elements/CV FR 2024.pdf" target="_blank" class="button">CV</a>
+        <h2>📱Contact ✉️</h2>
+        <p>Pour toute question ou demande d'information, vous pouvez me contacter de différentes manières :</p>
+        <!-- Bouton LinkedIn -->
+        <a href="https://www.linkedin.com/in/gabriel-casarotto/" target="_blank" class="button">LinkedIn</a>
+        <!-- Bouton E-mail -->
+        <a href="mailto:gabriel.casarotto-moreira@ipsa.fr" class="button">E-mail</a>
+        <!-- Bouton Téléphone -->
+        <a href="tel:+33777755193" class="button">Téléphone</a>
+        <!-- Bouton CV -->
+        <a href="elements/CV FR 2024.pdf" target="_blank" class="button">CV</a>
+    </div>
 </div>
+
     <!--Footer -->
     <div class="footer" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
