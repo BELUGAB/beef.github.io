@@ -338,7 +338,7 @@
     <!-- Bouton Téléphone -->
     <a href="tel:+33777755193" class="button">Téléphone</a>
     <!-- Bouton CV -->
-    <a href="elements/CV.pdf" target="_blank" class="button">CV</a>
+    <a href="elements/CV FR 2024.pdf" target="_blank" class="button">CV</a>
 </div>
     <!--Footer -->
     <div class="footer" data-aos="fade-up" data-aos-duration="1000">
