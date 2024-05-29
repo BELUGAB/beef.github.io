@@ -101,22 +101,19 @@
             margin: 0 3px;
         }
         .map-container {
-        margin: 2rem auto; /* Modifier la marge pour centrer verticalement */
-        display: flex;
-        justify-content: center; /* Centrer horizontalement */
+        margin: 2rem 0; /* Conserver la marge supérieure et inférieure */
+        text-align: center; /* Centrer horizontalement le contenu */
         }
         
         .map-container iframe {
-        display: block;
-        margin: 0 auto; /* Utiliser margin:auto pour centrer horizontalement */
-        border: 0;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        max-width: 100%; /* Pour s'assurer que la carte ne dépasse pas de la fenêtre */
-        height: 400px; /* Hauteur de la carte */
+            display: inline-block; /* Pour que l'iframe se comporte comme un élément en ligne */
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 100%; /* Pour s'assurer que la carte ne dépasse pas de la fenêtre */
+            height: 400px; /* Hauteur de la carte */
         }
-        
         .map-container iframe:hover {
             transform: scale(1.02);
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
