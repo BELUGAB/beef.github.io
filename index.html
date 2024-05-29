@@ -107,12 +107,14 @@
         }
         
         .map-container iframe {
-            border: 0;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            max-width: 100%; /* Pour s'assurer que la carte ne dépasse pas de la fenêtre */
-            height: 400px; /* Hauteur de la carte */
+        display: block;
+        margin: 0 auto; /* Utiliser margin:auto pour centrer horizontalement */
+        border: 0;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        max-width: 100%; /* Pour s'assurer que la carte ne dépasse pas de la fenêtre */
+        height: 400px; /* Hauteur de la carte */
         }
         
         .map-container iframe:hover {
