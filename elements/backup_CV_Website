@@ -606,12 +606,15 @@
     <!-- Section XP -->
     <div class="experience" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
-            <h1>🦺Expériences professionnelles👔</h1>
+            <h1>🦺Expériences professionnelles👔</h1><br><br>
             <ul>
                 <li style="--accent-color:#f94144">
-                    <div class="date">Octobre 2023<br>- Aujourd'hui</div>
-                    <div class="title">Title 1</div>
-                    <div class="descr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!</div>
+                    <div class="date">Octobre 2023 - Aujourd'hui</div>
+                    <div class="title">Intervenant Pédagogique en Mathématiques</div>
+                    <div class="descr"><h5>Complétude</h5><br>
+                    -Tutorat<br><br>
+                    -Adaptabilité pédagogique<br><br>
+                    -Compréhension des besoins de l'élève</div>
                 </li>
                 <li style="--accent-color:#f3722c">
                     <div class="date">AOÛT 2023 </div>
@@ -634,7 +637,7 @@
                     <div class="descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.</div>
                 </li>
                 <li style="--accent-color:#43aa8b">
-                    <div class="date">JUILLET 2022<br>- AOÛT 2022</div>
+                    <div class="date">JUILLET 2022 - AOÛT 2022</div>
                     <div class="title">Title 5</div>
                     <div class="descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.</div>
                 </li>
