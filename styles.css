@@ -493,8 +493,14 @@
                 width: 70px; /* Ajustez la largeur de l'image pour les smartphones */
                 height: 70px; /* Ajustez la hauteur de l'image pour les smartphones */
             }
-                .project-item h3 {
-                font-size: 0.8rem; /* Ajustez la taille de la police selon vos besoins */
+            .project-items {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-left: -10px; /* Compensation pour l'espacement des éléments internes */
+            }
+            .project-item h3 {
+             font-size: 0.8rem; /* Ajustez la taille de la police selon vos besoins */
             }
 
             /* Réduisez la taille des images des projets */
