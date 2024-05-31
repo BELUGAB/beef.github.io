@@ -478,6 +478,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
+            padding-left: 10px; /* Compense la marge ajoutée au premier élément */
         }
         
         .project-item {
@@ -485,7 +486,10 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-right: 10px; /* Ajoute une marge à droite de chaque élément */
+        }
+        
+        .project-item:not(:first-child) {
+            margin-left: 10px; /* Ajoute une marge à gauche de chaque élément, sauf le premier */
         }
         
         .project-image {
@@ -499,7 +503,4 @@
             margin: 0;
             font-size: 20px; /* Adjust the font size as needed */
         }
-        
-        
-
     </style>
