@@ -494,7 +494,7 @@
                 height: 70px; /* Ajustez la hauteur de l'image pour les smartphones */
             }
             .container {
-                    width : 100%
+                    max-width: 500px;
             }
             .project-items {
             display: flex;
