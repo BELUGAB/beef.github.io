@@ -493,6 +493,9 @@
                 width: 70px; /* Ajustez la largeur de l'image pour les smartphones */
                 height: 70px; /* Ajustez la hauteur de l'image pour les smartphones */
             }
+            .container {
+                    width : 100%
+            }
             .project-items {
             display: flex;
             justify-content: space-around;
