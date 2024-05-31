@@ -1,528 +1,315 @@
-<style>
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 
-        *,
-        *::before,
-        *::after {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-        
-        body {
-          --color: rgba(30, 30, 30);
-          --bgColor: rgba(245, 245, 245);
-          min-height: 100vh;
-          display: grid;
-          align-content: center;
-          gap: 2rem;
-          padding: 2rem;
-          font-family: "Poppins", sans-serif;
-          color: var(--color);
-          background: var(--bgColor);
-          font-family: 'Poppins', sans-serif;
-          margin: 0;
-          padding: 0;
-          background-color: #222; /* Fond sombre */
-          color: #ddd; /* Texte clair */
-        
-        }
-        
-        h1 {
-          text-align: center;
-        }
-        
-        ul {
-          --col-gap: 2rem;
-          --row-gap: 2rem;
-          --line-w: 0.25rem;
-          display: grid;
-          grid-template-columns: var(--line-w) 1fr;
-          grid-auto-columns: max-content;
-          column-gap: var(--col-gap);
-          list-style: none;
-          width: min(60rem, 90%);
-          margin-inline: auto;
-        }
-        
-        /* line */
-        ul::before {
-          content: "";
-          grid-column: 1;
-          grid-row: 1 / span 20;
-          background: rgb(225, 225, 225);
-          border-radius: calc(var(--line-w) / 2);
-        }
-        
-        /* columns*/
-        
-        /* row gaps */
-        ul li:not(:last-child) {
-          margin-bottom: var(--row-gap);
-        }
-        
-        /* card */
-        ul li {
-          grid-column: 2;
-          --inlineP: 1.5rem;
-          margin-inline: var(--inlineP);
-          grid-row: span 2;
-          display: grid;
-          grid-template-rows: min-content min-content min-content;
-        }
-        
-        /* date */
-        ul li .date {
-          --dateH: 3rem;
-          height: var(--dateH);
-          margin-inline: calc(var(--inlineP) * -1);
-        
-          text-align: center;
-          background-color: var(--accent-color);
-        
-          color: white;
-          font-size: 1.25rem;
-          font-weight: 700;
-        
-          display: grid;
-          place-content: center;
-          position: relative;
-        
-          border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
-        }
-        
-        /* date flap */
-        ul li .date::before {
-          content: "";
-          width: var(--inlineP);
-          aspect-ratio: 1;
-          background: var(--accent-color);
-          background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
-          position: absolute;
-          top: 100%;
-        
-          clip-path: polygon(0 0, 100% 0, 0 100%);
-          right: 0;
-        }
-        
-        /* circle */
-        ul li .date::after {
-          content: "";
-          position: absolute;
-          width: 2rem;
-          aspect-ratio: 1;
-          background: var(--bgColor);
-          border: 0.3rem solid var(--accent-color);
-          border-radius: 50%;
-          top: 50%;
-        
-          transform: translate(50%, -50%);
-          right: calc(100% + var(--col-gap) + var(--line-w) / 2);
-        }
-        
-        /* title descr */
-        ul li .title,
-        ul li .descr {
-          background: #555;
-          position: relative;
-          padding-inline: 1.5rem;
-        }
-        ul li .title {
-          overflow: hidden;
-          padding-block-start: 1.5rem;
-          padding-block-end: 1rem;
-          font-weight: 500;
-        }
-        ul li .descr {
-          padding-block-end: 1.5rem;
-          font-weight: 300;
-        }
-        
-        /* shadows */
-        ul li .title::before,
-        ul li .descr::before {
-          content: "";
-          position: absolute;
-          width: 90%;
-          height: 0.5rem;
-          background: rgba(0, 0, 0, 0.5);
-          left: 50%;
-          border-radius: 50%;
-          filter: blur(4px);
-          transform: translate(-50%, 50%);
-        }
-        ul li .title::before {
-          bottom: calc(100% + 0.125rem);
-        }
-        
-        ul li .descr::before {
-          z-index: -1;
-          bottom: 0.25rem;
-        }
-        
-        @media (min-width: 40rem) {
-          ul {
-            grid-template-columns: 1fr var(--line-w) 1fr;
-          }
-          ul::before {
-            grid-column: 2;
-          }
-          ul li:nth-child(odd) {
-            grid-column: 1;
-          }
-          ul li:nth-child(even) {
-            grid-column: 3;
-          }
-        
-          /* start second card */
-          ul li:nth-child(2) {
-            grid-row: 2/4;
-          }
-        
-          ul li:nth-child(odd) .date::before {
-            clip-path: polygon(0 0, 100% 0, 100% 100%);
-            left: 0;
-          }
-        
-          ul li:nth-child(odd) .date::after {
-            transform: translate(-50%, -50%);
-            left: calc(100% + var(--col-gap) + var(--line-w) / 2);
-          }
-          ul li:nth-child(odd) .date {
-            border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
-          }
-        }
-        
-        .credits {
-          margin-top: 1rem;
-          text-align: right;
-        }
-        .credits a {
-          color: var(--color);
-        }
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-        .hero {
-            position: relative;
-            height: 100vh;
-            background: url('https://4kwallpapers.com/images/wallpapers/dark-background-abstract-background-network-3d-background-3840x2160-8324.png') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            padding-top: 20px; /* Ajout d'un padding en haut pour éloigner le titre du bord supérieur */
-        }
+body {
+  --color: rgba(30, 30, 30);
+  --bgColor: rgba(245, 245, 245);
+  --accent-color: #007bff; /* Couleur d'accentuation pour la frise */
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--color);
+  background: var(--bgColor);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #222; /* Fond sombre */
+  color: #ddd; /* Texte clair */
+}
 
-        .hero h1 {
-            font-size: 4rem;
-            margin: 0;
-            animation: fadeInDown 1.5s ease-in-out;
-        }
-        
-        .hero p {
-            font-size: 1.5rem;
-            margin: 10px 0 0; /* Ajout d'une marge en haut pour éloigner le paragraphe du titre */
-            animation: fadeInUp 1.5s ease-in-out;
-        }
+h1 {
+  text-align: center;
+}
 
-        .content, .competence, .contact, .experience, .projet {
-            padding: 20px 20px;
-            min-height: 400px; /* Ajout d'une hauteur minimale pour uniformiser les sections */
-        }
-        /* Styles pour les titres des sections */
-        .content h2, .competence h2, .contact h2, .experience h2, .projet h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            margin-top: -10px; /* Réduire la marge supérieure */
-        }
+ul {
+  --col-gap: 2rem;
+  --row-gap: 2rem;
+  --line-w: 0.25rem;
+  display: grid;
+  grid-template-columns: var(--line-w) 1fr;
+  grid-auto-columns: max-content;
+  column-gap: var(--col-gap);
+  list-style: none;
+  width: min(60rem, 90%);
+  margin-inline: auto;
+  padding: 0; /* Ajout de padding à 0 pour éviter les marges inutiles */
+}
 
-        .content p, .competence p, .contact p, .experience p, .projet p {
-            font-size: 1.125rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        .button {
-            display: inline-block;
-            padding: 15px 30px;
-            margin: 10px; /* Ajout de la marge entre les boutons */
-            font-size: 1rem;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-        }
-        .button-container {
-            text-align: center;
-        }
+/* Line */
+ul::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / span 20;
+  background: rgb(225, 225, 225);
+  border-radius: calc(var(--line-w) / 2);
+}
 
-        .button:hover {
-            background-color: #0056b3;
-            transform: translateY(-5px);
-        }
+/* Columns and row gaps */
+ul li:not(:last-child) {
+  margin-bottom: var(--row-gap);
+}
 
+/* Card */
+ul li {
+  grid-column: 2;
+  --inlineP: 1.5rem;
+  margin-inline: var(--inlineP);
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+}
 
-        .competence img {
-            max-width: 100%;
-            height: auto;
-            margin: 10px;
-            border-radius: 15px;
-        }
-        .footer {
-            background-color: #222; /* Fond sombre */
-            color: #888; /* Texte gris clair */
-            padding: 20px 0;
-            text-align: center;
-        }
-        .footer p {
-            margin: 0;
-        }
-        .map-container {
-        margin: 2rem 0; /* Conserver la marge supérieure et inférieure */
-        text-align: center; /* Centrer horizontalement le contenu */
-        }
-        
-        .map-container iframe {
-            display: inline-block; /* Pour que l'iframe se comporte comme un élément en ligne */
-            border: 0;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            max-width: 100%; /* Pour s'assurer que la carte ne dépasse pas de la fenêtre */
-            height: 400px; /* Hauteur de la carte */
-        }
-        .map-container iframe:hover {
-            transform: scale(1.02);
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        }
+/* Date */
+ul li .date {
+  --dateH: 3rem;
+  height: var(--dateH);
+  margin-inline: calc(var(--inlineP) * -1);
+  text-align: center;
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: grid;
+  place-content: center;
+  position: relative;
+  border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+}
 
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        
-        /* Media Queries pour les petits écrans (smartphones) */
-        @media only screen and (max-width: 767px) {
-            /* Réduire la taille de la police des titres des dossiers */
-            .folder p {
-                font-size: 0.8rem; /* Ajustez la taille de la police selon vos besoins */
-            }
-        
-            /* Réduire la taille des images à l'intérieur des dossiers */
-            .folder img {
-                width: 70px; /* Ajustez la largeur de l'image pour les smartphones */
-                height: 70px; /* Ajustez la hauteur de l'image pour les smartphones */
-            }
-                .project-item h3 {
-        font-size: 1.5rem; /* Ajustez la taille de la police selon vos besoins */
-            }
+/* Date flap */
+ul li .date::before {
+  content: "";
+  width: var(--inlineP);
+  aspect-ratio: 1;
+  background: var(--accent-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
+  position: absolute;
+  top: 100%;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  right: 0;
+}
 
-            /* Réduisez la taille des images des projets */
-            .project-image {
-                width: 100px; /* Ajustez la largeur de l'image pour les smartphones */
-                height: 100px; /* Ajustez la hauteur de l'image pour les smartphones */
-            }
+/* Circle */
+ul li .date::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  aspect-ratio: 1;
+  background: var(--bgColor);
+  border: 0.3rem solid var(--accent-color);
+  border-radius: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+}
 
-            /* Ajustez l'espacement entre les projets */
-            .project-item {
-                margin-right: 10px; /* Réduisez la marge à droite */
-                margin-bottom: 20px; /* Ajoutez une marge en bas */
-            }
+/* Title and description */
+ul li .title,
+ul li .descr {
+  background: #555;
+  position: relative;
+  padding-inline: 1.5rem;
+}
+ul li .title {
+  overflow: hidden;
+  padding-block-start: 1.5rem;
+  padding-block-end: 1rem;
+  font-weight: 500;
+}
+ul li .descr {
+  padding-block-end: 1.5rem;
+  font-weight: 300;
+}
 
-            /* Assurez-vous que les boutons restent centrés */
-            .button-container {
-                text-align: center;
-            }
-        }
-        
-        /* Media Queries pour les tablettes */
-        @media only screen and (min-width: 768px) and (max-width: 991px) {
-            /* Ajoutez d'autres styles spécifiques aux tablettes ici */
-        }
-        
-        /* Media Queries pour les écrans de taille moyenne (ordinateurs portables) */
-        @media only screen and (min-width: 992px) and (max-width: 1199px) {
-            /* Ajoutez d'autres styles spécifiques aux écrans de taille moyenne ici */
-        }
+/* Shadows */
+ul li .title::before,
+ul li .descr::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  left: 50%;
+  border-radius: 50%;
+  filter: blur(4px);
+  transform: translate(-50%, 50%);
+}
+ul li .title::before {
+  bottom: calc(100% + 0.125rem);
+}
 
-        /* Teintes de blanc pour les différentes sections */
-        .content {
-            background-color: #222; /* A PROPOS DE MOI */
-        }
-        .competence {
-            background-color: #333; /* COMPETENCE */
-        }
-        .experience {
-            background-color: #444;
-            color: #fff;
-            padding: 50px;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
+ul li .descr::before {
+  z-index: -1;
+  bottom: 0.25rem;
+}
 
-        .contact {
-            background-color: #444; /* CONTACT */
-        }
+@media (min-width: 40rem) {
+  ul {
+    grid-template-columns: 1fr var(--line-w) 1fr;
+  }
+  ul::before {
+    grid-column: 2;
+  }
+  ul li:nth-child(odd) {
+    grid-column: 1;
+  }
+  ul li:nth-child(even) {
+    grid-column: 3;
+  }
 
-        /* Styles pour les dossiers */
-        .folders {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-        }
-        .folder {
-            cursor: pointer;
-            flex: 1;
-        }
-        .folder img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
+  /* Start second card */
+  ul li:nth-child(2) {
+    grid-row: 2 / 4;
+  }
 
-        /* Styles pour les albums */
-        .album {
-            display: none; /* Masquer initialement tous les albums */
-        }
+  ul li:nth-child(odd) .date::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    left: 0;
+  }
 
-        /* Modales pour les albums */
-        .modal {
-            display: none; /* Masquer initialement la modale */
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.8); /* Fond sombre semi-transparent */
-        }
+  ul li:nth-child(odd) .date::after {
+    transform: translate(-50%, -50%);
+    left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  }
+  ul li:nth-child(odd) .date {
+    border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+  }
+}
 
-        .modal-content {
-            margin: 10% auto;
-            background-color: #333; /* Fond sombre */
-            padding: 20px;
-            border: 1px solid #666;
-            width: 80%;
-            color: #ddd; /* Texte clair */
-        }
+.credits {
+  margin-top: 1rem;
+  text-align: right;
+}
+.credits a {
+  color: var(--color);
+}
 
-        .close {
-            color:#aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('https://4kwallpapers.com/images/wallpapers/dark-background-abstract-background-network-3d-background-3840x2160-8324.png') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding-top: 20px; /* Ajout d'un padding en haut pour éloigner le titre du bord supérieur */
+}
 
-        .close:hover,
-        .close:focus {
-            color: #fff; /* Texte blanc */
-            text-decoration: none;
-            cursor: pointer;
-        }
+.hero h1 {
+  font-size: 4rem;
+  margin: 0;
+  animation: fadeInDown 1.5s ease-in-out;
+}
 
-        /* Styles pour ajuster la taille des images à l'intérieur des dossiers */
-        .folder-image {
-            width: 120px; /* Ajustez la taille selon vos préférences */
-            height: 120px; /* Ajustez la taille selon vos préférences */
-            object-fit: cover; /* Redimensionner l'image tout en conservant ses proportions */
-            border-radius: 5px; /* Pour rendre l'image légèrement arrondie si nécessaire */
-        }
-        .timeline {
-            position: relative;
-            margin: 50px 0;
-        }
-        
-        .timeline-item {
-            position: relative;
-            padding: 20px;
-            border-left: 2px solid #007bff; /* Couleur de la ligne de la frise */
-            margin-bottom: 40px;
-        }
-        
-        .timeline-item::before {
-            content: attr(data-year);
-            position: absolute;
-            top: 0;
-            left: -70px; /* Positionnement de l'année sur la frise */
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #007bff; /* Couleur de l'année */
-        }
-        
-        .timeline-item h3 {
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-size: 1.5rem;
-        }
-        
-        .timeline-item p {
-            margin: 0;
-            font-size: 1rem;
-        }
-        .project-items {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin-left: -10px; /* Compensation pour l'espacement des éléments internes */
-        }
-        
-        .project-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin-right: 10px; /* Ajoute une marge à droite de chaque élément */
-            margin-bottom: 40px; /* Augmente la marge en bas pour espacer davantage les éléments */
-        }
+.hero p {
+  font-size: 1.5rem;
+  margin: 10px 0 0; /* Ajout d'une marge en haut pour éloigner le paragraphe du titre */
+  animation: fadeInUp 1.5s ease-in-out;
+}
 
-        /* Annule la marge pour le dernier élément */
-        .project-item:last-child {
-            margin-right: 0;
-        }
-        .project-image {
-            width: 150px; /* Adjust the width as needed */
-            height: 150px; /* Adjust the height as needed */
-            object-fit: cover; /* Ensure the image covers the area */
-            margin-bottom: 10px; /* Space between the image and the text */
-        }
-        
-        .project-item p {
-            margin: 0;
-            font-size: 20px; /* Adjust the font size as needed */
-        }
-    </style>
+.content, .competence, .contact, .experience, .projet {
+  padding: 20px 20px;
+  min-height: 400px; /* Ajout d'une hauteur minimale pour uniformiser les sections */
+}
+/* Styles pour les titres des sections */
+.content h2, .competence h2, .contact h2, .experience h2, .projet h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  margin-top: -10px; /* Réduire la marge supérieure */
+}
+
+.content p, .competence p, .contact p, .experience p, .projet p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.button {
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 10px; /* Ajout de la marge entre les boutons */
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.button-container {
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #0056b3;
+  transform: translateY(-5px);
+}
+
+.competence img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px;
+  border-radius: 15px;
+}
+.footer {
+  background-color: #222; /* Fond sombre */
+  color: #888; /* Texte gris clair */
+  padding: 20px 0;
+  text-align: center;
+}
+.footer p {
+  margin: 0;
+}
+.map-container {
+  margin: 2rem 0; /* Conserver les marges pour l'espacement */
+  border: 1px solid #ddd; /* Ajouter une bordure pour délimiter la carte */
+  border-radius: 8px; /* Ajouter des coins arrondis pour un style plus doux */
+  overflow: hidden; /* Masquer tout dépassement du contenu */
+}
+.map-container iframe {
+  width: 100%;
+  height: 350px; /* Ajuster la hauteur pour une meilleure visibilité sur les petits écrans */
+  border: none; /* Supprimer la bordure par défaut de l'iframe */
+  border-radius: 8px; /* Appliquer les coins arrondis à l'iframe */
+}
+
+@media only screen and (max-width: 767px) {
+  /* Ajustements pour les petits écrans (smartphones) */
+  .timeline-item::before {
+    left: unset; /* Réinitialiser la position de l'année sur la frise */
+    top: -30px; /* Déplacer l'année au-dessus de la frise */
+    right: 100%; /* Positionner l'année à l'extrême gauche */
+    transform: translateX(-100%); /* Déplacer l'année à gauche */
+    font-size: 1rem; /* Réduire la taille de la police de l'année */
+  }
+
+  .timeline-item {
+    padding: 10px; /* Réduire l'espace autour des éléments de la frise */
+    border-left: none; /* Supprimer la bordure à gauche */
+  }
+
+  .timeline-item h3 {
+    font-size: 1.25rem; /* Ajuster la taille de la police du titre */
+  }
+
+  .timeline-item p {
+    font-size: 1rem; /* Ajuster la taille de la police du paragraphe */
+  }
+}
+
