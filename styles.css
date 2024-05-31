@@ -346,7 +346,7 @@
                 height: 70px; /* Ajustez la hauteur de l'image pour les smartphones */
             }
                 .project-item h3 {
-                font-size: 1.5rem; /* Ajustez la taille de la police selon vos besoins */
+        font-size: 1.5rem; /* Ajustez la taille de la police selon vos besoins */
             }
 
             /* Réduisez la taille des images des projets */
@@ -496,32 +496,23 @@
         }
         .project-items {
             display: flex;
-            justify-content: space-between; /* Utilisez space-between pour répartir les éléments horizontalement */
+            justify-content: space-around;
             align-items: center;
-            margin-left: -20px; /* Compense la marge négative pour le premier élément */
-            margin-right: -20px; /* Compense la marge négative pour le dernier élément */
+            margin-left: -10px; /* Compensation pour l'espacement des éléments internes */
         }
         
         .project-item {
-            flex: 1; /* Permet à chaque élément de s'étirer pour occuper l'espace disponible */
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-left: 20px; /* Ajoute une marge à gauche de chaque élément */
-            margin-right: 20px; /* Ajoute une marge à droite de chaque élément */
+            margin-right: 10px; /* Ajoute une marge à droite de chaque élément */
             margin-bottom: 40px; /* Augmente la marge en bas pour espacer davantage les éléments */
         }
-        
-        /* Annule la marge pour le premier et le dernier élément */
-        .project-item:first-child {
-            margin-left: 0;
-        }
-        
+
+        /* Annule la marge pour le dernier élément */
         .project-item:last-child {
             margin-right: 0;
-        }
-
         }
         .project-image {
             width: 150px; /* Adjust the width as needed */
