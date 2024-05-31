@@ -480,61 +480,68 @@
         .project-item p {
             margin: 0;
             font-size: 20px; /* Adjust the font size as needed */
-        }
         /* Media Queries pour les petits écrans (smartphones) */
-@media only screen and (max-width: 767px) {
-    /* Réduire la taille de la police des titres des dossiers */
-    .folder p {
-        font-size: 0.8rem;
-    }
-
-    /* Réduire la taille des images à l'intérieur des dossiers */
-    .folder img {
-        width: 70px;
-        height: 70px;
-    }
-
-    /* Limiter la largeur des conteneurs */
-    .container {
-        max-width: 500px;
-    }
-
-    /* Afficher les projets 2 par 2 */
-    .project-items {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        margin-left: 0;
-    }
-
-    .project-item {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .project-image {
-        width: 100%;
-        height: auto;
-    }
-
-    .project-item p {
-        font-size: 1rem;
-    }
-
-    .button-container {
-        text-align: center;
-    }
-
-    /* Ajustements pour la hero section */
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-    }
-}
-       
+        @media only screen and (max-width: 767px) {
+            /* Réduire la taille de la police des titres des dossiers */
+            .folder p {
+                font-size: 0.8rem;
+            }
+        
+            /* Réduire la taille des images à l'intérieur des dossiers */
+            .folder img {
+                width: 70px;
+                height: 70px;
+            }
+        
+            /* Limiter la largeur des conteneurs */
+            .container {
+                max-width: 500px;
+                margin: 0 auto; /* Centrer le conteneur */
+                padding: 0 10px; /* Ajouter du padding pour éviter que le contenu touche les bords */
+            }
+        
+            /* Afficher les projets 2 par 2 */
+            .project-items {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                margin-left: 0;
+                padding: 0 10px; /* Ajouter du padding pour éviter que le contenu touche les bords */
+            }
+        
+            .project-item {
+                margin-right: 0;
+                margin-bottom: 20px;
+                padding: 10px; /* Ajouter du padding interne */
+                box-sizing: border-box; /* Assurer que le padding est inclus dans la largeur totale */
+            }
+        
+            .project-image {
+                width: 100%;
+                height: auto;
+            }
+        
+            .project-item p {
+                font-size: 1rem;
+            }
+        
+            .button-container {
+                text-align: center;
+            }
+        
+            /* Ajustements pour la hero section */
+            .hero {
+                padding: 20px 10px; /* Ajouter du padding pour éviter que le contenu touche les bords */
+            }
+        
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }       
         /* Media Queries pour les tablettes */
         @media only screen and (min-width: 768px) and (max-width: 991px) {
             /* Ajoutez d'autres styles spécifiques aux tablettes ici */
