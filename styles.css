@@ -482,46 +482,46 @@
             font-size: 20px; /* Adjust the font size as needed */
                 
          /* Ajouté pour les petits écrans (smartphones) */
-@media only screen and (max-width: 767px) {
-    /* Réduire la taille de la police des titres des dossiers */
-    .folder p {
-        font-size: 0.8rem; /* Ajustez la taille de la police selon vos besoins */
-    }
+        @media only screen and (max-width: 767px) {
+            /* Réduire la taille de la police des titres des dossiers */
+            .folder p {
+                font-size: 0.8rem; /* Ajustez la taille de la police selon vos besoins */
+            }
 
-    /* Réduire la taille des images à l'intérieur des dossiers */
-    .folder img {
-        width: 70px; /* Ajustez la largeur de l'image pour les smartphones */
-        height: 70px; /* Ajustez la hauteur de l'image pour les smartphones */
-    }
-    .container {
-            max-width: 500px;
-    }
-    .project-items {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Affiche les projets 2 par 2 */
-        gap: 10px; /* Ajoute un espace entre les projets */
-    }
-    .project-item h3 {
-        font-size: 0.8rem; /* Ajustez la taille de la police selon vos besoins */
-    }
+            /* Réduire la taille des images à l'intérieur des dossiers */
+            .folder img {
+                width: 70px; /* Ajustez la largeur de l'image pour les smartphones */
+                height: 70px; /* Ajustez la hauteur de l'image pour les smartphones */
+            }
+            .container {
+                    max-width: 500px;
+            }
+            .project-items {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* Affiche les projets 2 par 2 */
+                gap: 10px; /* Ajoute un espace entre les projets */
+            }
+            .project-item h3 {
+                font-size: 0.8rem; /* Ajustez la taille de la police selon vos besoins */
+            }
 
-    /* Réduisez la taille des images des projets */
-    .project-image {
-        width: 50px; /* Ajustez la largeur de l'image pour les smartphones */
-        height: 50px; /* Ajustez la hauteur de l'image pour les smartphones */
-    }
+            /* Réduisez la taille des images des projets */
+            .project-image {
+                width: 50px; /* Ajustez la largeur de l'image pour les smartphones */
+                height: 50px; /* Ajustez la hauteur de l'image pour les smartphones */
+            }
 
-    /* Ajustez l'espacement entre les projets */
-    .project-item {
-        margin-right: 0; /* Enlève la marge à droite pour les éléments en grille */
-        margin-bottom: 20px; /* Ajoutez une marge en bas */
-    }
+            /* Ajustez l'espacement entre les projets */
+            .project-item {
+                margin-right: 0; /* Enlève la marge à droite pour les éléments en grille */
+                margin-bottom: 20px; /* Ajoutez une marge en bas */
+            }
 
-    /* Assurez-vous que les boutons restent centrés */
-    .button-container {
-        text-align: center;
-    }
-}
+            /* Assurez-vous que les boutons restent centrés */
+            .button-container {
+                text-align: center;
+            }
+        }
         /* Media Queries pour les tablettes */
         @media only screen and (min-width: 768px) and (max-width: 991px) {
             /* Ajoutez d'autres styles spécifiques aux tablettes ici */
