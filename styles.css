@@ -345,6 +345,26 @@
                 width: 70px; /* Ajustez la largeur de l'image pour les smartphones */
                 height: 70px; /* Ajustez la hauteur de l'image pour les smartphones */
             }
+                .project-item h3 {
+        font-size: 1.5rem; /* Ajustez la taille de la police selon vos besoins */
+            }
+
+            /* Réduisez la taille des images des projets */
+            .project-image {
+                width: 100px; /* Ajustez la largeur de l'image pour les smartphones */
+                height: 100px; /* Ajustez la hauteur de l'image pour les smartphones */
+            }
+
+            /* Ajustez l'espacement entre les projets */
+            .project-item {
+                margin-right: 10px; /* Réduisez la marge à droite */
+                margin-bottom: 20px; /* Ajoutez une marge en bas */
+            }
+
+            /* Assurez-vous que les boutons restent centrés */
+            .button-container {
+                text-align: center;
+            }
         }
         
         /* Media Queries pour les tablettes */
@@ -486,8 +506,10 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-right: 20px; /* Ajoute une marge à droite de chaque élément */
+            margin-right: 10px; /* Ajoute une marge à droite de chaque élément */
+            margin-bottom: 40px; /* Augmente la marge en bas pour espacer davantage les éléments */
         }
+
         /* Annule la marge pour le dernier élément */
         .project-item:last-child {
             margin-right: 0;
