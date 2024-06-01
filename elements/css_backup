@@ -498,8 +498,8 @@
         
             /* Réduisez la taille des images des projets */
             .project-image {
-                width: 50px; /* Ajustez la largeur de l'image pour les smartphones */
-                height: 50px; /* Ajustez la hauteur de l'image pour les smartphones */
+                width: 70px; /* Ajustez la largeur de l'image pour les smartphones */
+                height: 70px; /* Ajustez la hauteur de l'image pour les smartphones */
             }
         
             /* Ajustez l'espacement entre les projets */
@@ -507,6 +507,10 @@
                 margin-right: 0; /* Enlève la marge à droite pour les éléments en grille */
                 margin-bottom: 20px; /* Ajoutez une marge en bas */
             }
+		/* Réduire la taille de la police des titres des sections */
+	    .content h2, .competence h2, .contact h2, .experience h2, .projet h2, .experience h1 {
+	        font-size: 2rem; /* Ajustez la taille de la police selon vos besoins */
+	    }
         
             /* Assurez-vous que les boutons restent centrés */
             .button-container {
